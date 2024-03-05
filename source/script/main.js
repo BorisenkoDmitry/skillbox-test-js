@@ -12,9 +12,9 @@ window.addEventListener("DOMContentLoaded", () => {
   iosVhFix();
   window.addEventListener("load", () => {
     burgerInit();
-    if (window.location.pathname === "/data.html")
+    if (window.location.pathname.split("/").pop() === "data.html")
       ProductsInit(products, window.location.hash);
-    if (window.location.pathname === "/library.html") {
+    if (window.location.pathname.split("/").pop() === "library.html") {
       SliderInit();
     }
   });
